@@ -9,11 +9,26 @@ message User {
   int32 id = 1;
   string name = 2;
   string email = 3;
+  string hashedPassword = 4;
 }
 
 // RPC Service Definition (Optional)
 service UserService {
   rpc GetUser (UserRequest) returns (UserResponse);
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+}
+
+message CreateUserRequest {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    string rawPassword = 4;
+}
+
+message CreateUserResponse{
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
 }
 
 message UserRequest {
