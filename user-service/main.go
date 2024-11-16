@@ -1,7 +1,7 @@
 package main
 
 import (
-	user "github/LavaJover/store-backend/user-service/proto"
+	user "github.com/LavaJover/store-backend/user-service/proto"
 	"log"
 	"net"
 	"context"
